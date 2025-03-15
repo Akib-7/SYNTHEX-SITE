@@ -95,10 +95,10 @@ const ProjectsGallery = () => {
       ></div>
       <div className="Overlay-2 absolute opacity-15 w-full card h-full     z-0"></div>
 
-      <h1 className=" absolute   p-3 w-full text-center  mt-[1em]  text-bg uppercase font-headingBold text-xl mobile:text-lg">
+      <h1 className=" absolute   p-3 w-full text-center  mt-[1em]  text-bg uppercase font-headingSemiBold text-xl mobile:text-lg">
         Projects
       </h1>
-      <h1 className=" absolute   p-3 w-full text-left bottom-0 mt-[1em]  text-bg/70 uppercase font-heading text-xl mobile:text-xs">
+      <h1 className=" absolute   p-3 w-full text-left bottom-0 mt-[1em]  text-bg/70 uppercase font-headingSemiBold text-xl mobile:text-xs">
         Synthex
       </h1>
       <h1 className=" absolute text-right bottom-0  p-3 w-[20%] mobile:w-[50%] right-0  mt-[1em]  text-bg/70 uppercase font-heading text-sm mobile:text-xs">
@@ -149,6 +149,7 @@ const ProjectsGallery = () => {
               src={project.image}
               width={2000}
               height={1556}
+              priority={false}
               className="object-cover p-2 absolute w-full h-full"
             />
             <AnimatedGradient opacity={"opacity-35"} />

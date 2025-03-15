@@ -19,7 +19,7 @@ const GradientCard = ({ CardSizes, title, description, serviceNumber }) => {
         {/* <p className="bg-black absolute left-0 bottom-0 text-bg font-heading w-full py-[.3em] px-[.6em] ">
           //01
         </p> */}
-        <h2 className="text-[30px] laptop:text-[50px] mobile:text-[30px]  mt-[1em] font-headingBold z-30  uppercase">
+        <h2 className="text-[30px] laptop:text-[50px] mobile:text-[30px]  mt-[1em] font-headingSemiBold z-30  uppercase">
           {title}
         </h2>
         <p className="font-heading laptop:text-2xl laptop:leading-[1.2em]  mobile:text-sm w-[70%] mx-auto mobile:w-[70%]   z-30 mt-[1em]">

@@ -43,10 +43,11 @@ const GradientImage = ({
           width={aspectWidth}
           height={aspectHeight}
           alt={alt}
+          priority={false}
           style={{ filter: `saturate(${saturate})` }}
           className={` w-full h-full ${objectFit} absolute bottom-0 z-10 `}
         />
-        <AnimatedGradient opacity={"opacity-70"} />
+        <AnimatedGradient opacity={"opacity-50"} />
       </div>
     </div>
   );
