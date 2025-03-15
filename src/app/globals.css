@@ -1,21 +1,115 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* html,
+body {
+  background-color: #dddddd;
+}
+body.no-scroll {
+  height: 100vh;
+  position: fixed;
+  top: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("/Picture/CardSvg.svg");
+  background-repeat: repeat;
+  background-size: contain;
+  opacity: 1;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* ARROW PIXEL FONT */
+@font-face {
+  font-family: "pixel";
+  src: url("/Fonts/PixelifySans-Bold.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+/* HEADINGS FONTS */
+
+@font-face {
+  font-family: "heading__semibold";
+  src: url("/Fonts/ChakraPetch-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "heading__regular";
+  src: url("/Fonts/ChakraPetch-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.Animated__Gradient {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0) 0%,
+    /* Fully transparent */ rgba(255, 255, 255, 0) 25%,
+
+    /* Fully transparent */ rgba(244, 244, 244, 0.2) 25%,
+    /* Red fully visible */ rgba(244, 244, 244, 0.2) 50%,
+
+    /* Red fully visible */ rgba(255, 255, 255, 0) 50%,
+    /* Fully transparent */ rgba(255, 255, 255, 0) 75%,
+
+    /* Fully transparent */ rgba(244, 244, 244, 0.2) 75%,
+    /* Red fully visible */ rgba(244, 244, 244, 0.2) 100%
+      /* Red fully visible */
+  );
+
+  background-size: 100% 15px; /* Adjust thickness of stripes */
+  animation: moveGradient 1s linear infinite;
+}
+
+@keyframes moveGradient {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -15px; /* Moves upward by the stripe height */
   }
 }
 
+.container {
+  width: 90%;
+  margin: 0 auto;
+}
+Image {
+  max-width: 100%;
+}
+
+/* For Webkit Browsers (Chrome, Edge, Safari, Opera) */
+::-webkit-scrollbar {
+  width: 5px; /* Width of the scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  background: #000000;
+  /* Background of the scrollbar track */
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(
+    45deg,
+    #f90716,
+    #f90716
+  ); /* Thumb gradient color */
+  border-radius: 90px; /* Rounded edges */
+}
+
+/* For Firefox */
+
+/* For Internet Explorer & Edge Legacy */
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  -ms-overflow-style: scrollbar; /* Ensures scrollbars are visible */
 }

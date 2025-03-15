@@ -7,9 +7,37 @@ export default {
   ],
   theme: {
     extend: {
+      fontFamily: {
+    
+        pixel: ["pixel", "sans-serif"],
+ 
+        heading: ["heading__regular", "sans-serif"],
+        headingSemiBold: ["heading__semibold", "sans-serif"],
+     
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+  
+        bg: "#DDDDDD",
+        text: "#1E1E1E",
+  
+         accent: "#F50A1C",
+      
+        
+      },
+
+      screens: {
+        laptop: { max: "1150px" },
+        tablet: { max: "950px" },
+        mobile: { max: "640px" },
+      },
+      animation: {
+        blink: "blink 1s infinite",
+      },
+      keyframes: {
+        blink: {
+          "0%, 100%": { opacity: "0" },
+          "50%": { opacity: "1" },
+        },
       },
     },
   },
