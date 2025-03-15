@@ -1,10 +1,11 @@
+"use client";
 import React from "react";
 import AnimatedButton from "./AnimatedButton";
 import Image from "next/image";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-const HeroSection2 = () => {
+const HeroSection = () => {
   useGSAP(() => {
     const arrowAnimation = gsap.timeline({ repeat: -1 });
 
@@ -111,4 +112,4 @@ const HeroSection2 = () => {
   );
 };
 
-export default HeroSection2;
+export default HeroSection;

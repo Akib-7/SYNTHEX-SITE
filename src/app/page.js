@@ -14,7 +14,7 @@ import NFTMarquee from "./components/NFTMarquee";
 
 import ProjectsSection from "./components/ProjectsSection";
 import ProjectsGallery from "./components/ProjectsGallery";
-import HeroSection2 from "./components/HeroSection2";
+import HeroSection from "./components/HeroSection";
 import Navbar from "./components/Navbar";
 
 import ContactUs from "./components/ContactUs";
@@ -43,7 +43,7 @@ export default function App() {
   return (
     <main className="overflow-x-hidden">
       <Navbar />
-      <HeroSection2 />
+      <HeroSection />
 
       <About />
 
